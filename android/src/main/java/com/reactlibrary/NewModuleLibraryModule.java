@@ -1,5 +1,7 @@
 package com.reactlibrary;
 
+import android.util.Log;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -23,5 +25,10 @@ public class NewModuleLibraryModule extends ReactContextBaseJavaModule {
     public void sampleMethod(String stringArgument, int numberArgument, Callback callback) {
         // TODO: Implement some actually useful functionality
         callback.invoke("Received numberArgument: " + numberArgument + " stringArgument: " + stringArgument);
+    }
+
+    @ReactMethod
+    public void startScan() {
+        Log.d("HTAG", "start scan Chromecast ");
     }
 }
